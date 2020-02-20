@@ -1,0 +1,35 @@
+prgmPASSWORD
+Lbl A
+Menu("MISSING VARIABLE","RESULT",0,"PRINCIPAL",1,"INTEREST RATE",2,"TIME",4)
+
+Lbl 0
+Fix 2
+Prompt P,R,N,T
+Disp P*(1+(R/100N))^(N*T)
+Pause 
+Menu("YAY,YOU ARE DONE","AGAIN",A,"QUIT",Z)
+
+Lbl 1
+Fix 2
+Prompt A,R,N,T
+Disp (A/((1+(R/100N))^(N*T)))
+Pause 
+Menu("YAY,YOU ARE DONE","AGAIN",A,"QUIT",Z)
+
+Lbl 2
+Fix 4
+Prompt A,P,N,T
+Disp 100((A/P)^(1/T)-1)
+Pause 
+Menu("YAY,YOU ARE DONE","AGAIN",A,"QUIT",Z)
+
+Lbl 4
+Fix 2
+Prompt A,P,R,N
+Disp ln(A/P)/ln(1+R)
+Pause 
+Menu("YAY,YOU ARE DONE","AGAIN",A,"QUIT",Z)
+
+Lbl Z
+Float
+Stop
