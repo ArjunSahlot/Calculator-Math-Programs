@@ -1,0 +1,25 @@
+DelVar L₁
+ClrHome
+Input "FROM ",A
+Input "TO ",B
+If B<2 or A>B
+Stop
+seq(C,C,1,B,2→L₁
+2→L₁(1
+For(C,2,B
+If √(B)≤L₁(C
+Goto A
+For(D,C+1,dim(L₁
+If not(fPart(L₁(D)/L₁(C:0→L₁(D
+End:DelVar E
+DelVar L₂
+For(D,1,dim(L₁
+If L₁(D
+Then:E+1→E
+L₁(D)→L₂(E
+End:End:L₂→L₁
+End:Lbl A
+For(B,1,dim(L₁
+If A<L₁(B:Then
+Disp L₁(B
+Pause :End:End
