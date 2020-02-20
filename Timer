@@ -1,0 +1,155 @@
+StoreGDB 0
+0→Xmin:1→X
+Xmax>94→V
+RecallGDB 0
+0→Xmin:94→Xmax
+­62→Ymin:0→Ymax
+If V=1
+Then
+BackgroundOff
+BorderColor 4
+TextColor(12
+End
+Lbl 1
+Menu("Timer","Count Down",2,"Stop Watch",3,"Exit",4)
+Lbl 4
+Stop
+Lbl 5
+RecallGDB 0
+Return
+Lbl 2
+While 1
+If V=0
+Text(­1,0,90," 
+getKey→Z
+Line(30,­17-2V,30,­48+10V
+Line(30,­48+10V,69-10V,­48+10V
+Line(30,­17-2V,69-10V,­17-2V
+Line(69-10V,­17-2V,69-10V,­48+10V
+Text(­1,28+42V,35+60V,A,B,":",C,D
+A+(Z=25 and E=0)-(Z=34 and A≥1 and E=0→A
+E+(Z=26 and E≤2)-(Z=24 and E≥1→E
+B+(Z=25 and B≤8 and E=1)-(Z=34 and B≥1 and E=1→B
+C+(Z=25 and C≤5 and E=2)-(Z=34 and C≥1 and E=2→C
+D+(Z=25 and D≤8 and E=3)-(Z=34 and D≥1 and E=3→D
+If Z=105
+Goto 6
+If E=0
+Then
+Text(18+37V,42+67V,"    
+Text(38+47V,42+67V,"    
+Text(18+37V,36+61V,"+
+Text(38+47V,36+61V,"-
+End
+If E=1
+Then
+Text(18+37V,36+61V,"    
+Text(38+47V,36+61V,"    
+Text(18+37V,42+67V,"+
+Text(38+47V,42+67V,"-
+Text(18+37V,54+78V,"    
+Text(38+47V,54+78V,"    
+End
+If E=2
+Then
+Text(18+37V,42+67V,"    
+Text(38+47V,42+67V,"    
+Text(18+37V,54+78V,"+
+Text(38+47V,54+78V,"-
+Text(18+37V,60+85V,"    
+Text(38+47V,60+85V,"    
+End
+If E=3
+Then
+Text(18+37V,54+78V,"    
+Text(38+47V,54+78V,"    
+Text(18+37V,60+85V,"+
+Text(38+47V,60+85V,"-
+End
+End
+End
+Lbl 6
+ClrDraw
+Line(30,­17-2V,30,­48+10V
+Line(30,­48+10V,69-10V,­48+10V
+Line(30,­17-2V,69-10V,­17-2V
+Line(69-10V,­17-2V,69-10V,­48+10V
+Text(­1,56+92V,0,"Press (ENTER) to Pause
+For(D,D,0,­.125
+If V=0
+Text(­1,0,90," 
+getKey→Z
+If Z=105
+Then
+Text(56+92V,0,"Timer paused. (ENTER) to resume.                 
+Pause 
+Text(­1,56+92V,0,"Press (ENTER) to Pause     
+End
+If D<.125 and C≥1
+Then
+C-1→C
+9.9→D
+End
+If D<.125 and C=0 and B≥1
+Then
+B-1→B
+5→C
+9.9→D
+End
+If D<.125 and C=0 and B=0 and A≥1
+Then
+A-1→A
+9→B
+5→C
+9.9→D
+End
+If D≤9.9 and C=0 and B=0 and A=0 and V=1
+TextColor(11
+Text(­1,28+42V,35+60V,iPart(A),iPart(B),":",iPart(C),iPart(D
+End
+ClrDraw
+If V=1
+TextColor(12
+Text(­1,28+42V,20+60V,"Times up!
+Pause 
+ClrDraw
+Goto 1
+Return
+Lbl 3
+Line(30,­17-2V,30,­48+10V
+Line(30,­48+10V,69-10V,­48+10V
+Line(30,­17-2V,69-10V,­17-2V
+Line(69-10V,­17-2V,69-10V,­48+10V
+DelVar ADelVar BDelVar CDelVar DDelVar Z
+Text(­1,28+42V,35+60V,A,B,":",C,D
+Pause 
+For(D,0,10,.1
+If V=0
+Text(­1,0,90," 
+getKey→Z
+If D=10
+Then
+C+1→C
+DelVar D
+End
+If C=6
+Then
+B+1→B
+DelVar CDelVar D
+End
+If B=10
+Then
+A+1→A
+DelVar BDelVar CDelVar D
+End
+If Z=85
+Goto 3
+If Z=105
+Pause 
+If Z=45
+Then
+ClrDraw
+Goto 1
+End
+Text(­1,28+42V,35+60V,iPart(A),iPart(B),":",iPart(C),iPart(D
+End
