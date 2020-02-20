@@ -1,0 +1,47 @@
+ClrHome
+Prompt X
+0→dim(L₁
+{1→L₂
+L₂→L₃
+X→N
+1→F
+For(P,2,6
+While P<Xnot(fPart(X/P
+Lbl 1
+max(F,P→F
+While fPart(X/F
+F+2→F
+End
+X/F→X
+F→L₁(1+dim(L₁
+If fPart(max(L₂)/F
+L₂→L₃
+augment(L₃,FL₂→L₂
+End
+End
+For(Q,P,√(X),30)
+If min(fPart(X/(Q+{0,4,6,10,12,16,22,24
+End
+If Q²≤X
+Then
+Q→P
+X→Q
+Goto 1
+End
+X→L₁(1+dim(L₁
+If fPart(max(L₂)/X
+L₂→L₃
+augment(L₃,XL₂→L₂
+Disp "PRIME FACTORS:
+Disp dim(L₁
+Pause L₁
+SortA(L₂
+Disp "DIVISORS:
+Disp dim(L₂
+Pause L₂
+Disp "FACTOR PAIRS:
+For(I,2,dim(L₂)/2+.5
+Disp {L₂(I),N/L₂(I
+If not(fPart(I/7
+Pause 
+End
