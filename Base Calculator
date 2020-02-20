@@ -1,0 +1,79 @@
+ClrHome
+Disp "Type EXIT in calc to exit."
+Input "Base:",S
+ClrHome
+Lbl BE
+Input "",Str5
+If Str5="EXIT"
+Goto E
+For(X,1,1000)
+If (sub(Str5,X,1)="+") or (sub(Str5,X,1)="-") or (sub(Str5,X,1)="/") or (sub(Str5,X,1)="*"):Goto B
+End
+Lbl B
+sub(Str5,X,1)→Str1
+sub(Str5,1,X-1)→Str2
+sub(Str5,X+1,length(Str5)-X)→Str6
+0→θ
+10→A:11→B:12→C:13→D:14→E:15→F:16→G:17→H:18→I:19→J
+1→Y
+For(X,length(Str2)-1,0,­1
+expr(sub(Str2,Y,1))
+θ+((Ans)S^X)→θ
+Y+1→Y
+End
+eval(θ)→Str7
+0→θ
+10→A:11→B:12→C:13→D:14→E:15→F:16→G:17→H:18→I:19→J
+1→Y
+For(X,length(Str6)-1,0,­1
+expr(sub(Str6,Y,1))
+θ+((Ans)S^X)→θ
+Y+1→Y
+End
+eval(θ)→Str9
+If Str1="+"
+eval(expr(Str7)+expr(Str9))→Str2
+If Str1="-"
+eval(expr(Str7)-expr(Str9))→Str2
+If Str1="/"
+eval(expr(Str7)/expr(Str9))→Str2
+If Str1="*"
+eval(expr(Str7)*expr(Str9))→Str2
+expr(Str2)→N
+0→P
+Repeat (S^P)>N
+P+1→P
+End
+P-1→P
+P→T
+" "→Str3
+For(P,T,0,­1)
+iPart(N/(S^P))→K
+If K=0:"0"→Str4
+If K=1:"1"→Str4
+If K=2:"2"→Str4
+If K=3:"3"→Str4
+If K=4:"4"→Str4
+If K=5:"5"→Str4
+If K=6:"6"→Str4
+If K=7:"7"→Str4
+If K=8:"8"→Str4
+If K=9:"9"→Str4
+If K=10:"A"→Str4
+If K=11:"B"→Str4
+If K=12:"C"→Str4
+If K=13:"D"→Str4
+If K=14:"E"→Str4
+If K=15:"F"→Str4
+If K=16:"G"→Str4
+If K=17:"H"→Str4
+If K=18:"I"→Str4
+If K=19:"J"→Str4
+Str3+Str4→Str3
+remainder(N,(S^P))→N
+End
+sub(Str3,2,length(Str3)-1)→Str3
+Disp Str3,"……………………………………………………………………"
+Goto BE
+Lbl E
+ClrHome
