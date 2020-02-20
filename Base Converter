@@ -1,0 +1,53 @@
+"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ→Str2
+length(Str2→M
+ClrHome
+Lbl 1
+Input "FROM BASE:",X
+If X≤1
+Goto E
+min(X,M→X
+Input "TO BASE:",Y
+If Y≤1
+Goto E
+min(Y,M→Y
+Disp "INPUT NUMBER:
+Input "",Str1
+If sub(Str1,1,1)=".
+"0"+Str1→Str1
+length(Str1→D
+inString(Str1,".",1→E
+If E≠0
+Then
+sub(Str1,1,E-1)+sub(Str1,E+1,D-E→Str1
+D-1→D
+Else
+D+1→E
+End
+D-E→B
+0→T
+For(A,1,D
+inString(Str2,sub(Str1,D-A+1,1))-1→C
+If C=­1 or C≥X
+Goto E
+T+CX^(A-B-2→T
+End
+max(int(ln(T)/ln(Y)),0→A
+" →Str1
+While A≥0 or T>^(­12
+int(T/(Y^A→G
+Str1+sub(Str2,G+1,1→Str1
+T-G(Y^A→T
+If A=0 and T≠0
+Str1+".→Str1
+A-1→A
+End
+sub(Str1,2,length(Str1)-1→Str1
+ClrHome
+Disp "NEW NUMBER:
+Pause Str1
+Stop
+Lbl E
+ClrHome
+Pause "-ERROR: INVALID-
+ClrHome
+Goto 1
