@@ -1,0 +1,64 @@
+Lbl 0
+Input "X1: ",A
+Input "Y1: ",B
+Input "X2: ",C
+Input "Y2: ",D
+
+Lbl 1
+Menu("WHAT DO YOU WANT TO DO","EQUATION",2,"DISTANCE",3,"INTERCEPTS",4,"GRAPH",5,"MIDPOINT",6)
+
+Lbl 2
+D-((D-B)(C-A))*C→θ
+(D-B)(C-A)→Z
+"ZX+θ"→Str1
+StringEqu(Str1,Y₁)
+Output(7,1,"Y=")
+Output(7,3,Z)
+Output(7,9,"X+")
+Output(7,11,θ)
+Pause 
+ClrHome
+Menu("NOW WHAT?","SAME POINTS",1,"DIFFERENT POINTS",0,"QUIT",7)
+
+Lbl 3
+Disp √((D-B)²+(C-A)²)
+Disp "SQUARE ROOT OF",(D-B)²+(C-A)²
+Pause 
+ClrHome
+Menu("NOW WHAT?","SAME POINTS",1,"DIFFERENT POINTS",0,"QUIT",7)
+
+Lbl 4
+D-((D-B)(C-A))*C→θ
+(D-B)(C-A)→Z
+­θZ→Y
+{0,θ}→L₂
+{Y,0}→L₃
+Output(5,1,"X-INT:")
+Output(5,7,L₂)
+Output(6,1,"Y-INT:")
+Output(6,7,L₃)
+Pause 
+ClrHome
+Menu("NOW WHAT?","SAME POINTS",1,"DIFFERENT POINTS",0,"QUIT",7)
+
+Lbl 5
+D-((D-B)(C-A))*C→θ
+(D-B)(C-A)→Z
+"ZX+θ"→Str1
+StringEqu(Str1,Y₁)
+DispGraph
+Pause 
+Disp 
+ClrHome
+Menu("NOW WHAT?","SAME POINTS",1,"DIFFERENT POINTS",0,"QUIT",7)
+
+Lbl 6
+{(A+C)/2,(B+D)/2}→L₁
+Disp L₁
+Pause 
+ClrHome
+Menu("NOW WHAT?","SAME POINTS",1,"DIFFERENT POINTS",0,"QUIT",7)
+
+Lbl 7
+DelVar Y₁
+Stop
