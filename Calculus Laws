@@ -1,0 +1,71 @@
+ClrHome
+
+Output(1,6,".: Limit Method :."
+Output(2,1,"f'(x)=lim  f(x+h)-f(x)"
+Output(3,6,"h->0  ----------- "
+Output(4,17,"h"
+Output(6,1,"h=0 & solve final"
+Output(8,1,"Gen slope formula="
+Output(9,1,"(y-y0)=m(x-x0)"
+
+Pause ""
+ClrHome
+
+Output(1,1,"Con||c*f |cf`"
+Output(2,1,"ImpChn||y^3 |(3y^2)y`"
+Output(3,1,"ImpPow||2xy |2[xy`+y]"
+Output(4,1,"Pow||x*n |nxn"
+Output(5,1,"Sum||f+g |f`+g`"
+Output(6,1,"Dif||f-g |f`-g`"
+Output(7,1,"Prd||f*g |(f`g)+(fg`)"
+Output(8,1,"Div||f/g |(f`g)-(fg`)/g²"
+Output(9,1,"Rec||1/f |-(f`)/f²"
+Output(10,1,"Chn||f(g)|[f`(g)]*g`"
+Pause ""
+ClrHome
+
+Output(1,1,"CosQ:1=+|2=-|3=-|4=+"
+Output(2,1,"SinQ:1=+|2=+|3=-|4=-"
+Output(3,1,"ASTC(+)||Soh|Cah|Toa"
+Output(4,1,"0,1,0,-1||Sin  |Cos"
+Output(5,1,"1,0,-1,0||Cos  |-Sin"
+Output(6,1,"0U0U|π/4&5π/4||Tan|Sec²"
+Output(7,1,"1/Tan   ||Cot  |-Csc²"
+Output(8,1,"1/Cos   ||Sec  |Sec.Tan"
+Output(9,1,"1/Sin   ||Csc  |-Csc.Cot"
+Output(10,1,"[√(0,1,2,3,4)]/2
+Pause ""
+ClrHome
+
+Output(1,1,"LAW||FUNC|DRVT"
+Output(2,1,"---||----|----"
+Output(3,1,"Cns||c   |0"
+Output(4,1,"X  ||x   |1"
+Output(5,1,"X² ||x²  |x"
+Output(6,1,"Sqr||√x  |(1/2)x^-(1/2)"
+Output(7,1,"Sin^2+Cos^2 ||1"
+Output(8,1,"1+Tan^2     ||Sec^2"
+Output(9,1,"1+Cot^2     ||Csc^2"
+Pause ""
+ClrHome
+
+Output(1,1,"###Prime Plot###"
+Output(2,1,"CN   ||f`=0"
+Output(3,1,"POI  ||f``=0"
+Output(4,1,"F``(x)0 ||Cave ñ"
+Output(5,1,"F``(x)0 ||Vex  u"
+Output(6,1,"F`ax^2(!=)b||a&b=CN"
+Output(7,1,"F`(x)-a+ ||R Min"
+Output(8,1,"F`(x)+a- ||R Max"
+Output(9,1,"!(Max&Min)||++,--"
+Output(10,1,"NmlLine ||-1/Tan(x)"
+Pause ""
+ClrHome
+
+Disp "(A^X)'=ln(A)*A^X"
+Disp "^(X)'=^(X)"
+Disp "ln(X)'=1/X"
+Disp "(Alog(X))'=","1/(X*ln(A))"
+Pause ""
+Disp "If G(Y)=F(X):","G'(Y)=1/F'(X)","If F(A)=G(A)=0,","Then: F(X)/G(X)=","F'(X)/G'(X),WHEN","X CLOSES IN ON A
+Pause ""
